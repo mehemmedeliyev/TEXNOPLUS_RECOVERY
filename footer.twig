@@ -1,0 +1,361 @@
+<div id="_mobile_column_left" class="container"></div>
+<div id="_mobile_column_right" class="container"></div>
+<footer id="footer" class="{{ ishome }}">
+  <div class="container">
+    <div class="row">
+        <div class="footer-before">
+          {{ footerbefore }}
+        </div>   
+        <div class="footer-container">
+          {{ footermiddle }}
+          <div class="block-contact col-lg-5 col-md-5 col-sm-12 footer-block">
+              <h5 class="hidden-sm hidden-xs">{{ text_storeinformation }}</h5>
+              <div id="contact-info-container" class="footer-contact">
+                <div class="row">
+                  {% if storeaddress %}
+                  <div class="block address col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <span class="icon"><i class="fa fa-map-marker"></i></span>
+                    <div class="content"><a href="https://goo.gl/maps/rrDRUVRwC8eH9Qpm6">{{ storeaddress }}</a></div>
+                  </div>
+                  {% endif %}
+                  <div class="block address col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <span class="icon"><i class="fa fa-map-marker"></i></span>
+                    <div class="content"><a href="https://goo.gl/maps/EquNBfoVXfGFY62s9">Rövşən Cəfərov 10 (20 Yanvar filialı)</a></a></div>
+                  </div>
+                  
+                  {% if storetelephone %}
+                  <div class="block phone col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <span class="icon phone"><i class="fa fa-mobile"></i></span>
+                    <div class="content">
+                      <a href="tel:0121840">{{ storetelephone }}</a>
+                    </div>
+                  </div>
+                  {% endif %}
+                  
+                  
+                  {% if storefax %}
+                  <div class="block fax col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <span class="icon"><i class="fa fa-whatsapp"></i></span>
+                    <div class="content"><a href="https://wa.me/994993331840">{{ storefax }}</a></div>
+                  </div>
+                  {% endif %}
+                  {% if storeemail %}
+                  <div class="block email col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <span class="icon"><i class="fa fa-envelope"></i></span>
+                    <div class="content">
+                      <a href="mailto:{{ storeemail }}">{{ storeemail }}</a>
+                    </div>
+                  </div>
+                  {% endif %}
+                </div>
+              </div>
+          </div>
+          <section class="information col-lg-5 col-md-5 col-sm-12 footer-block">
+            <h5 class="hidden-sm hidden-xs">{{ text_information }}</h5>
+            <div class="footer-title clearfix  hidden-lg hidden-md collapsed" data-target="#information-container" data-toggle="collapse">
+              <span class="h3">{{ text_information }}</span>
+              <span class="navbar-toggler collapse-icons">
+                <i class="fa fa-angle-down add"></i>
+                <i class="fa fa-angle-up remove"></i>
+              </span>
+            </div>
+            {% if informations %}
+            <div id="information-container" class="collapse footer-dropdown">    
+              <ul class="list-unstyled">
+               {% for information in informations %}
+                <li><a href="{{ information.href }}">{{ information.title }}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+            {% endif %}
+          </section>
+
+          <section class="services col-lg-2 col-md-2 col-sm-12 footer-block">
+            <h5 class="hidden-sm hidden-xs">{{ text_service }}</h5>
+            <div class="footer-title clearfix  hidden-lg hidden-md collapsed" data-target="#services-container" data-toggle="collapse">
+              <span class="h3">{{ text_service }}</span>
+              <span class="navbar-toggler collapse-icons">
+                <i class="fa fa-angle-down add"></i>
+                <i class="fa fa-angle-up remove"></i>
+              </span>
+            </div>
+            <div id="services-container" class="collapse footer-dropdown">
+              <ul class="list-unstyled">
+                <li><a href="{{ contact }}">{{ text_contact }}</a></li>
+                <li><a href="{{ return }}">{{ text_return }}</a></li>
+                <li><a href="{{ sitemap }}">{{ text_sitemap }}</a></li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="extras col-lg-2 col-md-2 col-sm-12 footer-block">
+            <h5 class="hidden-sm hidden-xs">{{ text_extra }}</h5>
+            <div class="footer-title clearfix  hidden-lg hidden-md collapsed" data-target="#extras-container" data-toggle="collapse">
+              <span class="h3">{{ text_extra }}</span>
+              <span class="navbar-toggler collapse-icons">
+                <i class="fa fa-angle-down add"></i>
+                <i class="fa fa-angle-up remove"></i>
+              </span>
+            </div>
+            <div id="extras-container" class="collapse footer-dropdown">
+              <ul class="list-unstyled">
+                <li><a href="{{ manufacturer }}">{{ text_manufacturer }}</a></li>
+              </ul>
+            </div>
+          </section>
+<!--
+          <section class="account col-lg-3 col-md-3 col-sm-12 footer-block">
+            <h5 class="hidden-sm hidden-xs">{{ text_account }}</h5>
+            <div class="footer-title clearfix  hidden-lg hidden-md collapsed" data-target="#account-container" data-toggle="collapse">
+              <span class="h3">{{ text_account }}</span>
+              <span class="navbar-toggler collapse-icons">
+                <i class="fa fa-angle-down add"></i>
+                <i class="fa fa-angle-up remove"></i>
+              </span>
+            </div>
+            <div id="account-container" class="collapse footer-dropdown">
+              <ul class="list-unstyled">
+                <li><a href="{{ account }}">{{ text_myaccount }}</a></li>
+                <li><a href="{{ order }}">{{ text_order }}</a></li>
+                <li><a href="{{ wishlist }}">{{ text_wishlist }}</a></li>
+                <li><a href="{{ newsletter }}">{{ text_newsletter }}</a></li>
+              </ul>
+            </div>
+          </section>   -->
+        </div>
+    </div>
+  </div>
+  <div class="footer-after">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 col-md-12 col-xs-12">{{ footerafter }}</div>
+      </div>
+    </div>
+  </div>
+  
+</footer>
+{% for script in scripts %}
+<script src="{{ script }}" type="text/javascript"></script>
+{% endfor %}
+<!--
+OpenCart is open source software and you are free to remove the powered by OpenCart if you want, but its generally accepted practise to make a small donation.
+Please donate via PayPal to donate@opencart.com
+//-->
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close" style="margin-top:20px;">&times;</span>
+      <h2>Online sifariş</h2>
+    </div>
+    <div class="modal-body">
+<form id="buyOnline">
+    <h4>Ödəniş növünü seçin</h4>
+		  <input type="radio" onclick="javascript:toggleCredit();" id="cash" name="paymentType" value="cash" checked>
+		  <label for="cash">Nağd</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		  <input type="radio" onclick="javascript:toggleCredit();" id="credit" name="paymentType" value="credit">
+		  <label for="credit">Kredit</label>
+		  
+		  
+		  <br><br>
+		  <label for="fname">S.A.A.</label><br>
+		  <input class="form-control" type="text" id="fname" name="fname"><br>
+		  <label for="phone">Mobil Telefon</label><br>
+		  <input class="form-control" type="text" id="phone" name="phone"><br>
+			<div id="hideCredit" style="display:none">
+				<div class="row">
+					<div class="col-md-6 col-xs-12">
+						<label for="homePhone">Ev telefonu</label><br>
+						<input class="form-control" type="text" id="homePhone" name="homePhone"><br>
+						<label for="birthdate">Təvəllüdünüz</label><br>
+						<input class="form-control" type="text" id="birthdate" name="birthdate"><br>
+					</div>
+					<div class="col-md-6 col-xs-12">
+						<label for="passportSerie">Şəxsiyyət vəsiqəsinin seriyası</label><br>
+						<input class="form-control" type="text" id="passportSerie" name="passportSerie"><br>
+						<label for="passportPin">Şəxsiyyət vəsiqəsinin  FİN kodu</label><br>
+						<input class="form-control" type="text" id="passportPin" name="passportPin"><br>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-xs-12">
+						<label for="regAddr">Qeydiyyat ünvanı</label><br>
+						<input class="form-control" type="text" id="regAddr" name="regAddr"><br>
+					</div>
+					<div class="col-md-6 col-xs-12">
+						<label for="realAddr">Faktiki ünvan</label><br>
+						<input class="form-control" type="text" id="realAddr" name="realAddr"><br>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6 col-xs-12">
+						<label for="workPlace">İş yeri</label><br>
+						<input class="form-control" type="text" id="workPlace" name="workPlace"><br>
+						<label for="position">Vəzifə</label><br>
+						<input class="form-control" type="text" id="position" name="position"><br>
+					</div>
+					<div class="col-md-6 col-xs-12">
+						<label for="experience">İş təcrübəsi</label><br>
+						<input class="form-control" type="text" id="experience" name="experience"><br>
+						<label for="salary">Əməkhaqqı</label><br>
+						<input class="form-control" type="text" id="salary" name="salary"><br>
+					</div>
+				</div>
+			</div>
+		  <input class="hidden" type="text" id="productURL" name="productURL">
+		  <br>
+		  <input class="btn btn-primary btn-lg" style="margin-bottom: 40px" type="submit" value="Sifariş et">
+		</form>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function toggleCredit() {
+    if (document.getElementById('credit').checked) {
+        document.getElementById('hideCredit').style.display = 'block';
+    } else {
+        document.getElementById('hideCredit').style.display = 'none';
+    }
+}
+
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("modalBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+function modalbtnclick(pid) {
+  modal.style.display = "block";
+  document.getElementById("productURL").value = "http://texnoplus.az/index.php?route=product/product&product_id=" + pid;
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+//Submit form
+      $(function () {
+
+        $('#buyOnline').on('submit', function (e) {
+
+          e.preventDefault();
+
+          $.ajax({
+            type: 'post',
+            url: 'submitOnline.php',
+            data: $('#buyOnline').serialize(),
+            success: function () {
+              alert('Müraciətiniz qəbul olundu, tezliklə sizinlə əlaqə saxlanılacaq!');
+			  modal.style.display = "none";
+            }
+          });
+
+        });
+
+      });
+</script>
+
+<style>
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 250px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 40%;
+  min-width: 480px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+</style>
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+(function(){
+var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+s1.async=true;
+s1.src='https://embed.tawk.to/5e81adf735bcbb0c9aabc346/default';
+s1.charset='UTF-8';
+s1.setAttribute('crossorigin','*');
+s0.parentNode.insertBefore(s1,s0);
+})();
+</script>
+<!--End of Tawk.to Script-->
+
+</body></html>
